@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#credentials
+fp-dashboard-284608-e1c4cb864ad0.json
