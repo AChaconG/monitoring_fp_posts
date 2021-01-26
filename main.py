@@ -26,12 +26,20 @@ df_short = df[['date','social_media', 'post_id', 'post_creation_date', 'engageme
 df_short['engagements'] = pd.to_numeric(df_short.engagements) # Change all values to numerical values
 
 # Instagram data
-df_insta = df_short[(df_short['social_media'] == 'instagram') & (df_short['engagements'] >= 60)]
+df_insta = df_short[(df_short['social_media'] == 'instagram') & (df_short['engagements'] >= 85)]
 print(df_insta)
 
 # LinkedIn data
-df_linkedIn = df_short[(df_short['social_media'] == 'linkedIn') & (df_short['engagements'] >= 140)]
+df_linkedIn = df_short[(df_short['social_media'] == 'linkedIn') & (df_short['engagements'] >= 300)]
 print(df_linkedIn)
+
+# Facebook data
+df_facebook = df_short[(df_short['social_media'] == 'facebook') & (df_short['engagements'] >= 40)]
+print(df_facebook)
+
+# Twitter data
+df_twitter = df_short[(df_short['social_media'] == 'twitter') & (df_short['engagements'] >= 10)]
+print(df_twitter)
 
 #print(df_short.engagements.unique())
 
